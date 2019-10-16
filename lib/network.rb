@@ -33,14 +33,5 @@ class Network
       payroll[char.actor] = char.salary
     end
     payroll
-
-  #   chars.reduce({}) do |payroll, char|
-  #     payroll(char.actor) = char.salary
-  # end
+  end
 end
-end
-
-
-#shows is array of show objects
-#show objects contain arrays of characters
-#character objects have hashes of actor and salary
