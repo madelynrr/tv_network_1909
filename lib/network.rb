@@ -15,12 +15,11 @@ class Network
     chars = @shows.map do |show|
       show.characters
     end.flatten
-    chars.sort_by do |char|
+
+    sorted_actors = chars.sort_by do |char|
       char.salary
-    end.last.actor
+    end
+
+    sorted_actors.last.actor
   end
 end
-
-#array of shows => show objects
-#each show object => array of actors
-#each actor object => hash with salary
