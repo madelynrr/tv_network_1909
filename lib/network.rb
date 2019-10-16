@@ -12,9 +12,12 @@ class Network
   end
 
   def highest_paid_actor
-    @shows.find_all do |show|
-      show.characters.salary
-    end
+    chars = @shows.map do |show|
+      show.characters
+    end.flatten
+    chars.sort_by do |char|
+      char.salary
+    end.last.actor
   end
 end
 
